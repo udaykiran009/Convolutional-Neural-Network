@@ -6,4 +6,4 @@ python train.py
 
 
 
-# Python version 2.7 is required with numpy and matplotlib modules
+Python version 2.7 is required with numpy and matplotlib modules

@@ -17,9 +17,9 @@ Output_number = 10
 learningrate = 0.01	#learning rate
 Image_size = 28
 Image_channel = 1
-kernl_shape=4
-kernl1_number = 10
-kernl2_number =10
+kernl_shape=5
+kernl1_number = 8
+kernl2_number =8
 batch_sze = 20
 epoch_number = 2	 # number of iterations
 mu = 0.98
@@ -29,7 +29,7 @@ PICKLE_FILE = 'trained.pickle'
 
 
 ## Data extracting
-m =1000
+m =10000
 X = extract_data('t10k-images-idx3-ubyte.gz', m, Image_size)
 y_dash = extract_labels('t10k-labels-idx1-ubyte.gz', m).reshape(m,1)
 image=X[99]
@@ -49,7 +49,7 @@ test_data = np.hstack((X,y_dash))
 
 # print('loaded00000000000000000000000000000000000000')
 
-m =10000
+m =50000
 X = extract_data('train-images-idx3-ubyte.gz', m, Image_size)
 y_dash = extract_labels('train-labels-idx1-ubyte.gz', m).reshape(m,1)
 # print (np.mean(X), np.std(X))
